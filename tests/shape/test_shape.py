@@ -7,8 +7,8 @@ from graphics.shape.shape import Shape
 
 class ShapeForTest(Shape):
 
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
+    def __init__(self, center: Point):
+        super().__init__(center)
 
     def calculate_area(self) -> float:
         pass
@@ -25,11 +25,11 @@ class TestShape(TestCase):
 
         # act & assert
         with self.assertRaisesRegex(TypeError, '^center can only be a Point$'):
-            ShapeForTest(center=center)
+            ShapeForTest(center)
 
     def test_get_center(self):
         # arrange
-        cut = ShapeForTest(center=Point(1, 2))
+        cut = ShapeForTest(Point(1, 2))
 
         # act
         result = cut.get_center()
