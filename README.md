@@ -20,7 +20,7 @@ in einer Git Bash unter Windows.
 ### Clonen des Repositories
 
 ```shell
-git clone git@github.com:gpietrek/HelloPython.git
+git clone git@github.com:gpietrek/python-oo.git
 ```
 
 Es ist ein neues Verzeichnis mit dem Namen `HelloPython` entstanden.
