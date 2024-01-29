@@ -27,7 +27,7 @@ Es ist ein neues Verzeichnis mit dem Namen `HelloPython` entstanden.
 
 Wechsel in das Verzeichnis und Abfrage des Status mit
 ```shell
-cd HelloPython
+cd python-oo
 git status
 ```
 sollte ungefähr folgende Ausgabe ergeben:
