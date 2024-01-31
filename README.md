@@ -1,4 +1,4 @@
-# HelloPython
+# python-oo
 
 Example for
 - classes in Python
@@ -23,7 +23,7 @@ in einer Git Bash unter Windows.
 git clone git@github.com:gpietrek/python-oo.git
 ```
 
-Es ist ein neues Verzeichnis mit dem Namen `HelloPython` entstanden.
+Es ist ein neues Verzeichnis mit dem Namen `python-oo` entstanden.
 
 Wechsel in das Verzeichnis und Abfrage des Status mit
 ```shell
@@ -53,7 +53,7 @@ python -m pip install -r requirements.txt
 
 Für jede neu geöffnete Shell muss einmalig in die virtuelle Umgebung gewechselt werden:
 ```shell
-cd <pfad_zu_src>/HelloPython
+cd <pfad_zu_src>/python-oo
 source venv/bin/activate
 ```
 
