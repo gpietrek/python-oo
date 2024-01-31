@@ -1,10 +1,14 @@
 from __future__ import annotations
 
+from shop.person.adress import Adress
+
+
 class Person:
-    def __init__(self, vorname: str, nachname: str, gebname : str = '') -> None:
+    def __init__(self, vorname: str, nachname: str, gebname : str = '', adresse: Adress = None) -> None:
         self._vorname = vorname
         self._nachname = nachname
         self._gebname = gebname
+        self._adresse = adresse
 
     def get_nachname(self) -> str:
         return self._nachname
@@ -26,6 +30,11 @@ class Person:
         if (len(self._gebname) == 0):
             return self.shortRepresentation()
         return f"{self._vorname} {self._nachname}, geb. {self._gebname}"
+
+    def postanschrift(self) -> str:
+        if (self._adresse is None ):
+            return self.shortRepresentation()
+        return f'{self.shortRepresentation()}\n{self._adresse.anschrift()}'
 
     def __str__(self):
         return self.shortRepresentation()

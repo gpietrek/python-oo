@@ -1,4 +1,5 @@
 from unittest import TestCase
+from unittest.mock import Mock
 
 from shop.person.person import Person
 
@@ -38,3 +39,18 @@ class TestPerson(TestCase):
 
         # assert
         self.assertEqual(result, 'Georg Meier, geb. Pietrek')
+
+    def test_postanschrift_returns_correct_value(self):
+        # arrange
+        adresseMock = Mock()
+        adresseMock.anschrift.return_value = 'someAnschrift'
+        cut = Person('Georg', 'Pietrek', adresse = adresseMock)
+
+        # act
+        postanschrift = cut.postanschrift()
+
+        # assert
+        self.assertEqual(postanschrift, 'Georg Pietrek\nsomeAnschrift')
+        adresseMock.anschrift.assert_called_once()
+
+
